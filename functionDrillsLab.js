@@ -246,6 +246,16 @@ printAllNames(namesArr)
 
 //CODE HERE
 
+function thatsOdd(Nums){
+  if(Nums % 2 === 0){
+    return "That's not odd!"
+  } else {
+    return "That is odd indeed!"
+  }
+}
+
+let oddChecker = thatsOdd(5)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -259,6 +269,9 @@ printAllNames(namesArr)
 
 //CODE HERE
 
+const bestMovie = (movie) => `${movie} is the best movie ever!`;
+
+console.log(bestMovie("Sharknado"));
 
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -273,6 +286,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
 //CODE HERE
 
+function bigOrSmall(arr) {
+  const answers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 100) {
+      answers.push("big");
+    } else {
+      answers.push("small");
+    }
+  }
+  return answers;
+}
+
+const arrayEvaluator = bigOrSmall(bigOrSmallArray);
+console.log(arrayEvaluator);
 
 ////////////////// PROBLEM 16 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
@@ -284,6 +311,17 @@ let loser = 'Glimmer'
 
 //CODE HERE
 
+function theEliminator(c, l){
+  for(let i = 0; i < c.length; i++){
+    if (c[i] === l){
+      c.splice(i, 1)
+    }
+  }
+  return c
+}
+
+console.log(theEliminator(contestants, loser))
+
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -294,6 +332,8 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+sampleString.toUpperCase()
+console.log(sampleString)
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
@@ -306,6 +346,20 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+//CODE HERE
+
+function emailCheck(email) {
+  const cutEmail = email.toString().trim();
+  if (cutEmail.includes("@")) {
+    return "email verified";
+  } else {
+    return "must provide a valid email address";
+  }
+}
+
+console.log(emailCheck("  adfs@yahoo.com  "));
+console.log(emailCheck("kjlj.gmail.com"));
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -314,6 +368,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
+function cocoFrogs (gold){
+  return (gold/3)
+}
+
+let totalFrogs = cocoFrogs(8)
+console.log(totalFrogs)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -321,6 +381,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
+function cocoFrogs (gold){
+  return Math.floor(gold/3)
+}
+
+let totalFrogs2 = cocoFrogs(8)
+console.log(totalFrogs2)
 
 
 ////////////////// PROBLEM 21 ////////////////////
@@ -331,6 +398,17 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
+function arrAscend(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i + 1]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const arrayIsAscending = arrAscend(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 22 ////////////////////
 
